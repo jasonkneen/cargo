@@ -1,5 +1,5 @@
 // add our module
-var o = require("cargo/cargo");
+var o = require("cargo");
 
 // create a window
 var win1 = Titanium.UI.createWindow();
