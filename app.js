@@ -49,17 +49,6 @@ var button = Titanium.UI.createButton({
 button.addEventListener("click",function() {
 	// now we can target a row label specifically based on it's id	
 	o.getById("row4").text = "Voila!";	
-	
-	o.each(function(obj) {
-		if (obj.id == 'row4') {		
-			alert(obj.id);	
-			break;
-		}
-		
-	});
-	
-		
-		
 
 });
 
