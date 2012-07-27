@@ -79,3 +79,7 @@ To remove/destroy a pointer stored in Cargo, use
 
 Any changes/contributions welcome - please fork and submit a pull request!
     
+##Notes
+
+* Cargo adds an "Index" property to the object that is added in order to determine it's order in the container - I'll probably remove this / do it differently to avoid changing the source object
+* You can access $.length to get the no. of items in the container                                                                                                             
