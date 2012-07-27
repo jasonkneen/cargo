@@ -74,6 +74,14 @@ and now we can, outside of the table/loop access a *specific* label by simply do
 To remove/destroy a pointer stored in Cargo, use
 
     $.remove('foo');
+    
+Iterate through the container by supplying a callback function - return false to break the loop
+
+    $.each(function(obj) {
+    
+    	alert(obj.id);    	
+    	
+    });
 
 *Cargo.js* is the main file, *app.js* is an example app file to demo it.
 

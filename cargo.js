@@ -59,6 +59,20 @@ exports.getIndexOf = function(id) {
 	return false;
 }
 
+// allows iteration through array, calls callback with each obj
+// break the loop by returning false from callback.
+exports.each = function(callback) {
+	
+	for (i in objects) {
+		
+		if (callback) {
+			if (callback(objects[i]) ==false) {
+				break;
+			}			
+		};		
+	}
+}
+
 // removes an item from the array based on id
 exports.remove = function(id)
 {
