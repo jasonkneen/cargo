@@ -6,11 +6,11 @@ var objects = [];
 exports.add = function(obj)
 {	
 	if (obj.id && !this.getById(obj.id)) {
-	
+
 		objects.push(obj);
+		
+		exports.length = objects.length;
 	}
-	
-	exports.length = objects.length;
 };
 
 // allows .item("123") to retrieve an object
@@ -28,7 +28,7 @@ exports.getByIndex = function(index)
 
 	}
 	else {
-		return [];
+		return false;
 	}
 }
 
@@ -37,24 +37,34 @@ exports.getById = function(id)
 {
 	for (i in objects) {
 
-		objects[i].index = i;
-	
-
 		if (objects[i].id == id) {
 
 			return objects[i];
 		}
 	}
-	
-	return [];
+
+	return false;
 };
+
+exports.getIndexOf = function(id) {
+	
+	for (i in objects) {
+
+		if (objects[i].id == id) {
+
+			return i
+		}
+	}
+
+	return false;
+}
 
 // removes an item from the array based on id
 exports.remove = function(id)
 {
 	var obj = this.getById(id);
 
-	objects.splice(obj.index, 1);
+	objects.splice(getIndexOf(obj), 1);
 
 	exports.length = objects.length;
 };
