@@ -64,7 +64,7 @@ exports.remove = function(id)
 {
 	var obj = this.getById(id);
 
-	objects.splice(getIndexOf(obj), 1);
+	objects.splice(this.getIndexOf(id), 1);
 
 	exports.length = objects.length;
 };
