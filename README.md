@@ -76,4 +76,6 @@ To remove/destroy a pointer stored in Cargo, use
     $.remove('foo');
 
 *Cargo.js* is the main file, *app.js* is an example app file to demo it.
+
+Any changes/contributions welcome - please fork and submit a pull request!
     
