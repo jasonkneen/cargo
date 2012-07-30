@@ -89,4 +89,5 @@ Any changes/contributions welcome - please fork and submit a pull request!
     
 ##Notes
 
-* You can access $.length to get the no. of items in the container                                                                                                             
+* You can access $.length to get the no. of items in the container      
+* For Android you may need to reference the commonJS file absolutely i.e. /Resources/cargo.js
