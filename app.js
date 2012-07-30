@@ -3,6 +3,7 @@ var o = require("cargo");
 
 // create a window
 var win1 = Titanium.UI.createWindow();
+win1.backgroundColor = '#fff';
 
 // create a demo table
 var table = Titanium.UI.createTableView({bottom:50});
@@ -38,7 +39,7 @@ win1.add(table);
 
 // let's create a button to test
 var button = Titanium.UI.createButton({
-				Title:'Change Label row 4',
+				title:'Change Label row 4',
 				bottom:5,
 				left:5,
 				width:315,
