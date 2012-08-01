@@ -1,8 +1,7 @@
-// array to hold our object collection
+// array representing our container
 var objects = [];
 
-// adds a new object to the array, only objects
-// with .id specified are added.
+// adds an item to the container (only if it has a .id specified)
 exports.add = function(obj)
 {	
 	if (obj.id && !this.getById(obj.id)) {
@@ -19,7 +18,7 @@ exports.item = function(id)
 	return this.getById(id);
 }
 
-// allows retrival based on order in array
+// get by index
 exports.getByIndex = function(index)
 {
 	if (!objects.length == 0) {
@@ -32,7 +31,7 @@ exports.getByIndex = function(index)
 	}
 }
 
-// allow retrieval by id ref (same as .item("123"))
+// get by id (same as .item("123"))
 exports.getById = function(id)
 {
 	for (i in objects) {
@@ -46,6 +45,7 @@ exports.getById = function(id)
 	return false;
 };
 
+// gets the index of an id
 exports.getIndexOf = function(id) {
 	
 	for (i in objects) {
@@ -59,8 +59,7 @@ exports.getIndexOf = function(id) {
 	return false;
 }
 
-// allows iteration through array, calls callback with each obj
-// break the loop by returning false from callback.
+// iterative container, pass false to break
 exports.each = function(callback) {
 	
 	for (i in objects) {
@@ -73,7 +72,7 @@ exports.each = function(callback) {
 	}
 }
 
-// removes an item from the array based on id
+// remove an item from the container based on id
 exports.remove = function(id)
 {
 	var obj = this.getById(id);
